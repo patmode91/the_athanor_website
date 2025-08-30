@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Sanctum Sanctorum</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="sanctum-container">
+        <div id="background-layer"></div>
+        <div id="veil-layer" data-tilt data-tilt-perspective="2000" data-tilt-speed="400" data-tilt-max="10">
+            <div id="shard-layer"></div>
+        </div>
+        <div id="content-layer">
+            <!-- Content will go here -->
+            <h1>Welcome to The Dragon's Athanor</h1>
+            <p>Explore a world seen through a shattered, burning obsidian mirror.</p>
+            <form>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password">
+                <button type="submit">Enter</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+

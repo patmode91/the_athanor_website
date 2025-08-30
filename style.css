@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: sans-serif;
+    color: white;
+}
+
+#sanctum-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#background-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("aiease_1756576075525.jpg");
+    background-size: cover;
+    background-position: center;
+    animation: pan-zoom 60s infinite alternate ease-in-out;
+}
+
+@keyframes pan-zoom {
+    0% {
+        transform: scale(1) translate(0, 0);
+    }
+    100% {
+        transform: scale(1.1) translate(5%, 5%);
+    }
+}
+
+#veil-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 10, 15, 0.35);
+    backdrop-filter: blur(12px) saturate(150%);
+    -webkit-backdrop-filter: blur(12px) saturate(150%);
+    transform-style: preserve-3d;
+}
+
+#shard-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("aiease_1756588320825.png");
+    background-size: cover;
+    background-position: center;
+}
+
+#content-layer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translateZ(60px);
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+#content-layer h1 {
+    margin-top: 0;
+}
+
+#content-layer form {
+    margin-top: 20px;
+}
+
+#content-layer label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#content-layer input[type="password"] {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+#content-layer button {
+    padding: 10px 20px;
+    background-color: #FF4500;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#content-layer button:hover {
+    background-color: #e03e00;
+}
+
