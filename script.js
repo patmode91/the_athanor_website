@@ -9,3 +9,14 @@ form.addEventListener('submit', function(event) {
     }
 });
 
+
+
+function checkPassword() {
+    var passwordInput = document.getElementById("password");
+    if (passwordInput.value === "FORMULAPOTIONSALVATION") {
+        alert("Access Granted!");
+    } else {
+        alert("Access Denied!");
+    }
+}
+
