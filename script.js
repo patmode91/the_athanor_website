@@ -1,13 +1,13 @@
-VanillaTilt.init(document.querySelector("#veil-layer"), {
-    max: 10,
-    speed: 400,
-    perspective: 2000
-});
+var passwordInput = document.getElementById('password');
+var form = document.querySelector('form');
 
-// It's good practice to also initialize on the shard layer if you want slightly different effects
-// VanillaTilt.init(document.querySelector("#shard-layer"), {
-//     max: 12,
-//     speed: 450,
-//     perspective: 2200
-// });
+form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    if (passwordInput.value === 'FORMULAPOTIONSALVATION') {
+        alert('Access Granted!');
+        // Here you would typically redirect to the actual content
+    } else {
+        alert('Access Denied!');
+    }
+});
 
