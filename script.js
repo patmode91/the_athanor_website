@@ -1,14 +1,9 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const passwordInput = document.getElementById("password");
-    const enterButton = document.getElementById("enter-button");
-
-    enterButton.addEventListener("click", function() {
-        if (passwordInput.value === "FORMULAPOTIONSALVATION") {
-            alert("Access Granted!");
-            // You can add code here to reveal the main content
-        } else {
-            alert("Access Denied!");
-        }
-    });
+document.getElementById("enter-button").addEventListener("click", function() {
+    var passwordInput = document.getElementById("password");
+    if (passwordInput.value === "FORMULAPOTIONSALVATION") {
+        alert("Access Granted!");
+    } else {
+        alert("Access Denied!");
+    }
 });
 
