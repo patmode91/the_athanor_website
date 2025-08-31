@@ -28,17 +28,9 @@ document.getElementById("enter-button").addEventListener("click", function() {
 
             setTimeout(() => {
                 // T = 1.0s to T = 2.0s (The Welcome Emerges)
+                document.getElementById("password-container").style.display = "none";
                 contentLayer.classList.remove("content-layer-hidden");
                 contentLayer.style.animation = "fadeIn 1s ease-out forwards";
-
-                // Remove the initial password input and show content
-                document.getElementById("password-container").style.display = "none";
-                contentLayer.innerHTML = `
-                    <h1>Welcome, Initiate!</h1>
-                    <p>You have successfully entered The Dragon's Athanor.</p>
-                    <p>This is where the true journey begins...</p>
-                    <p>More content will be revealed here soon.</p>
-                `;
 
             }, 500); // 0.5s (shard ignite) + 0.5s (delay for veil shatter start) = 1.0s
 
