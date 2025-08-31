@@ -15,8 +15,6 @@ document.getElementById("enter-button").addEventListener("click", function() {
 
         setTimeout(() => {
             // T = 0.5s to T = 1.5s (The Veil Shatters)
-            // For simplicity, we'll fade out and scale down the layers.
-            // A true particle effect would be much more complex and require a library or canvas.
             shardLayer.style.transition = "opacity 1s ease-out, transform 1s ease-out";
             veilLayer.style.transition = "opacity 1s ease-out, transform 1s ease-out";
             shardLayer.style.opacity = 0;
@@ -30,9 +28,8 @@ document.getElementById("enter-button").addEventListener("click", function() {
 
             setTimeout(() => {
                 // T = 1.0s to T = 2.0s (The Welcome Emerges)
-                contentLayer.style.transition = "opacity 1s ease-out";
-                contentLayer.style.opacity = 1; // Assuming it starts hidden
-                contentLayer.style.transform = "translate(-50%, -50%) translateZ(60px)"; // Ensure correct position
+                contentLayer.classList.remove("content-layer-hidden");
+                contentLayer.style.animation = "fadeIn 1s ease-out forwards";
 
                 // Remove the initial password input and show content
                 document.getElementById("password-container").style.display = "none";
