@@ -103,3 +103,21 @@ body {
     background-color: #e03e00;
 }
 
+
+
+.shard-ignite {
+    filter: drop-shadow(0 0 15px #FF4500) brightness(2.5);
+    transition: filter 500ms ease-in;
+}
+
+
+
+.content-layer-hidden {
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
